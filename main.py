@@ -11,7 +11,8 @@ def generate_master_readme(github_client, lc_metadata):
     readme_content += "Collection of LeetCode questions to ace the coding interview! - Synced Automatically\n\n"
     
     readme_content += "## Profile Stats\n"
-    readme_content += "![LeetCode Stats](https://leetcard.jacoblin.cool/ebaal?theme=dark&font=baloo)\n"
+    username = config.LEETCODE_USERNAME if config.LEETCODE_USERNAME else "your_leetcode_username"
+    readme_content += f"![LeetCode Stats](https://leetcard.jacoblin.cool/{username}?theme=dark&font=baloo)\n"
     readme_content += "\n"
     
     if lc_metadata:

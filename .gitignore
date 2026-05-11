@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 run.log
 run_output.txt
+output.txt
+install.log
+downloaded_files/

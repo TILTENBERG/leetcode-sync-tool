@@ -9,6 +9,7 @@ GITHUB_REPO = os.getenv('GITHUB_REPO')
 
 LEETCODE_SESSION = os.getenv('LEETCODE_SESSION')
 LEETCODE_CSRF_TOKEN = os.getenv('LEETCODE_CSRF_TOKEN')
+LEETCODE_USERNAME = os.getenv('LEETCODE_USERNAME')
 
 def validate_config():
     missing = []

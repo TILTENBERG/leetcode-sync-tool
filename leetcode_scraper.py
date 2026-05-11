@@ -17,7 +17,7 @@ class LeetCodeScraper:
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
         }
         if self.csrf_token:
-            self.headers["Cookie"] += f" csrftoken={self.csrf_token};"
+            self.headers["Cookie"] += f"; csrftoken={self.csrf_token}"
             self.headers["X-CSRFToken"] = self.csrf_token
             self.headers["Referer"] = "https://leetcode.com/submissions/"
 
@@ -121,5 +121,8 @@ class LeetCodeScraper:
             'erlang': 'erl',
             'elixir': 'ex',
             'dart': 'dart'
-        }
-        return lang_map.get(language.lower(), 'txt')
+        ext = lang_map.get(language.lower())
+        if not ext:
+            print(f"Warning: Unknown language '{language}'. Saving as .txt")
+            ext = 'txt'
+        return ext
