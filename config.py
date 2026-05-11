@@ -17,7 +17,7 @@ def validate_config():
         print("Error: GITHUB_PAT and GITHUB_REPO must be set in .env")
         return False
         
-    if not LEETCODE_SESSION:
-        print("Warning: LEETCODE_SESSION not set. LeetCode sync will be skipped.")
+    if not LEETCODE_SESSION or not LEETCODE_USERNAME:
+        print("Warning: LEETCODE_SESSION or LEETCODE_USERNAME not set. LeetCode sync will be skipped.")
         
     return True
