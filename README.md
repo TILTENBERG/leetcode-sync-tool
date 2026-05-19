@@ -22,6 +22,7 @@ A Python script that automatically fetches your accepted LeetCode submissions an
    - `GITHUB_REPO`: The name of the repository to sync to (e.g., `cp-solutions`). The script will automatically create it if it doesn't exist!
    - `LEETCODE_SESSION`: Your LeetCode `LEETCODE_SESSION` cookie.
    - `LEETCODE_CSRF_TOKEN`: Your LeetCode `csrftoken` cookie.
+   - `LEETCODE_USERNAME`: Your LeetCode username (used to generate your dynamic profile badge).
 
 3. **Run the Script:**
    ```bash

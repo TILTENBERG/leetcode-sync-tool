@@ -121,6 +121,7 @@ class LeetCodeScraper:
             'erlang': 'erl',
             'elixir': 'ex',
             'dart': 'dart'
+        }
         ext = lang_map.get(language.lower())
         if not ext:
             print(f"Warning: Unknown language '{language}'. Saving as .txt")
